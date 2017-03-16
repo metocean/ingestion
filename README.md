@@ -1,4 +1,4 @@
-# ingestion
-This document describes how clients can provide data to be ingested in MSL systems
+# Data Ingestion
+This document describes how external users can provide data for ingestion in MSL operational systems.
 
  - [Observations](observations)
