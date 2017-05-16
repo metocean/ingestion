@@ -42,13 +42,15 @@ Although SI units are preferable, some common units are also accepted, but those
   - Wind Speed: Knots
   - Date and Time (NZT): 2000/12/22 12:44:00
 
-**Time Zone**: Different Time Zones are also supported but UTC is preferable.ssrth instead of the Magnetic North but that's not always the case.
+**Time Zone:** Different Time Zones are also supported but UTC is preferable.ssrth instead of the Magnetic North but that's not always the case.
 
-**Vertical position**: The vertical position of a measurement must be referred to MSL on WGS84. If not, the appropriate correction scheme must be mentioned at set-up time.
+**Directional Variables:** such as Wind Direction and Current Direction, it's important to be mentioned during the set-up process if the data has been [Magnetic Corrected](https://en.wikipedia.org/wiki/Magnetic_declination) or not. This correction can be done at our side if not applied by the instrument. Often instruments can provide the angle related to the True north instead of the Magnetic North but that's not always the case.
 
-**Latitude and Longitude**: It's assumed that all coordinates are in WGS84 datum, thus assumed that the coordinates are in SRID 4326.
+**Vertical position:** The vertical position of a measurement must be referred to MSL on WGS84. If not, the appropriate correction scheme must be mentioned at set-up time.
 
-**Missing Values**: Sometimes an instrument will not have all variables available for all the records so missing values should be defined either as blank space in CSV or -999. The first would be preferable, example:
+**Latitude and Longitude:** It's assumed that all coordinates are in WGS84 datum, thus assumed that the coordinates are in [SRID 4326](http://spatialreference.org/ref/epsg/wgs-84/).
+
+**Missing Values:** Sometimes an instrument will not have all variables available for all the records so missing values should be defined either as blank space in CSV or -999. The first would be preferable, example:
 
 With values:
 ```
@@ -58,11 +60,11 @@ With missing values:
 ```
 Buoy1, 2000-12-22T00:00:00,,,10 (the sequence of comma represent missing values for those columns)
 ```
-File names: The file-name often should contain a reference to the initial date and time the file relates to:
+**File names:** The file-name often should contain a reference to the initial date and time the file relates to:
 ```
 wave_buoy_200012221244.csv
 ```
-The columns in the CSV file are usually composed by:
+**Columns:** The columns in the CSV file are usually composed by:
 ```
 Instrument ID, Date and Time (UTC), Latitude, Longitude, Variable1, Variable2,...
 
