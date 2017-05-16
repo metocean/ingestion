@@ -5,6 +5,7 @@ Ingesting Observation Data on MSL
 This document is aimed to demonstrate how Observation data can be ingested into MSL data systems, often with the end goal to be visualized on MOV and provide validation reference to Forecast models.
 
 Ingestion Methods
+====
 
 There are a few methods we currently support for ingesting Observation Data in MOV. Here it's described from most preferable to the least preferable way of doing
 
@@ -16,13 +17,12 @@ API Access: Client provides a web API (HTTP/HTTPS) endpoint and access credentia
 
 Email Ingest: Client sends an email to incoming@metoceanview.com with a specific Subject and the data either as an attached file or in the email body.
 
---- Up to here we can activate without much effort --
-
 SSH/SCP Ingest: Clients connect to our SSH servers and upload the data using an SSH Identity Key known by our servers.
 
 Web Scrapping: Client publishes the data on a website and we scrape the contents of the page in order to mine the data
 
 Data format
+====
 
 The most common way to provide data to be ingested it's as CSV files where each row represents one measurement. One file can contain one or more instrument set of records.
 
