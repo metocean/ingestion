@@ -1,5 +1,5 @@
 
-Ingesting Observation Data on MetOcean Solutions.
+Ingesting Observation Data on MetOcean Solutions
 ====
 
 This document is aimed to demonstrate how Observation data can be ingested into MSL data systems, often with the end goal to be visualized on MOV and provide validation reference to Forecast models.
