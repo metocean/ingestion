@@ -42,9 +42,9 @@ Although SI units are preferable, some common units are also accepted, but those
   - Wind Speed: Knots
   - Date and Time (NZT): 2000/12/22 12:44:00
 
-**Time Zone:** Different Time Zones are also supported but UTC is preferable.ssrth instead of the Magnetic North but that's not always the case.
+**Time Zone:** Different Time Zones are also supported but UTC is preferable.
 
-**Directional Variables:** such as Wind Direction and Current Direction, it's important to be mentioned during the set-up process if the data has been [Magnetic Corrected](https://en.wikipedia.org/wiki/Magnetic_declination) or not. This correction can be done at our side if not applied by the instrument. Often instruments can provide the angle related to the True north instead of the Magnetic North but that's not always the case.
+**Directional Variables:** such as Wind Direction or Current Direction is assumed to use True North [Magnetic Corrected](https://en.wikipedia.org/wiki/Magnetic_declination) instead of Magnectic North. In case the latter, it can be corrected at our side. Often instruments do provide the angle related to the True north instead of the Magnetic North but that's not always the case.
 
 **Vertical position:** The vertical position of a measurement must be referred to MSL on WGS84. If not, the appropriate correction scheme must be mentioned at set-up time.
 
