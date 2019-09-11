@@ -9,9 +9,9 @@ Ingestion Methods
 
 There are a few methods we currently support for ingesting Observation Data in MOV. Here it's described from most preferable to the least preferable way of doing
 
-1. **FTP Pull**: The client provides an FTP server account which we can download the data from as CSV.
+1. **FTP Pull**: The client provides an FTP/SFTP/FTPS server account which we can download the data from as CSV.
 
-2. **FTP Push**: We provide an FTP server account which the client upload the data as CVS format.
+2. **FTPS Push**: We provide an FTPS server account which the client upload the data as CVS format.
 
 3. **API Access**: Client provides a web API (HTTP/HTTPS) endpoint and access credentials which we can use to download the data from, usually in a JSON format.
 
