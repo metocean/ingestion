@@ -15,11 +15,9 @@ There are a few methods we currently support for ingesting Observation Data in M
 
 3. **API Access**: Client provides a web API (HTTP/HTTPS) endpoint and access credentials which we can use to download the data from, usually in a JSON format.
 
-4. **Email Ingest**: Client sends an email to incoming@metoceanview.com with a specific Subject and the data either as an attached file or in the email body.
+4. **SSH/SCP Ingest**: Clients connect to our SSH servers and upload the data using an SSH Identity Key known by our servers.
 
-5. **SSH/SCP Ingest**: Clients connect to our SSH servers and upload the data using an SSH Identity Key known by our servers.
-
-6. **Web Scrapping**: Client publishes the data on a website and we scrape the contents of the page in order to mine the data
+5. **Web Scrapping**: Client publishes the data on a website and we scrape the contents of the page in order to mine the data
 
 Data format
 ====
