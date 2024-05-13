@@ -19,6 +19,22 @@ There are a few methods we currently support for ingesting Observation Data in M
 
 5. **Web Scrapping**: Client publishes the data on a website and we scrape the contents of the page in order to mine the data
 
+
+# Station Metadata (buoy, ship, AWS, etc)
+
+ **Station name**: It is usually the client's hardware name. It is not *not mandatory*. e.g. *Esp_BC2 Water Height*.
+
+ **Description**: It is usually the client's description for the hardware. e.g. *Beacon 2 AWAC and E2M Beacon 2 Meteorology*.
+
+ **Coordinates**: The station coordinates (latitude/longitude) in decimal degrees format.
+
+ **Vertical position:** The vertical position of a measurement must be referred to MSL on WGS84. If not, the appropriate correction scheme must be mentioned at set-up time.
+
+
+> The **Level** it’s usually the altitude relative to Mean Sea Level (MSL) where the measurement was taken.
+For atmospheric stations, it’s assumed the information provided is the sum of “ground_level” and the sensor’s height. Sometimes, particularly for AWS, the stations measurements may be already be normalized to 10m height.
+For oceanic observations, level is considered to be same as “negative depth” from water surface.
+
 Data format
 ====
 
@@ -40,11 +56,10 @@ Although SI units are preferable, some common units are also accepted, but those
   - Wind Speed: Knots
   - Date and Time (NZT): 2000/12/22 12:44:00
 
-**Time Zone:** Different Time Zones are also supported but UTC is preferable.
+**Time Zone:** Different Time Zones are also supported but **UTC** is preferable.
 
 **Directional Variables:** such as Wind Direction or Current Direction is assumed to use True North [Magnetic Corrected](https://en.wikipedia.org/wiki/Magnetic_declination) instead of Magnectic North. In case the latter, it can be corrected at our side. Often instruments do provide the angle related to the True north instead of the Magnetic North but that's not always the case.
 
-**Vertical position:** The vertical position of a measurement must be referred to MSL on WGS84. If not, the appropriate correction scheme must be mentioned at set-up time.
 
 **Latitude and Longitude:** It's assumed that all coordinates are in WGS84 datum, thus assumed that the coordinates are in [SRID 4326](http://spatialreference.org/ref/epsg/wgs-84/).
 
@@ -69,3 +84,11 @@ Instrument ID, Date and Time (UTC), Latitude, Longitude, Variable1, Variable2,..
 Buoy1, 2000-12-22T00:00:00,-33.4423, 156.0455,3.33,5.55,...
 ```
 Ideally, the data file should contain one or more header lines. If does not contain a header, the data columns should be informed at set-up time.
+
+Data and Service documentation
+====
+
+In cases where the client want to provide the data through an API service, they will want to send the documentaion about how to use/access this service: the Auth method, Query parameters, update frequency, etc.
+It is also important to have a data documentation explaining the data structure, the variables, etc.
+
+See the [Wiki](https://metservice.atlassian.net/wiki/spaces/METOCEAN/pages/105318490/Client+s+API+documentation) for examples
