@@ -1,13 +1,13 @@
 
-Ingesting Observation Data on MetOcean Solutions
+Ingesting Observation Data on MetService Data Systems
 ====
 
-This document aims to demonstrate how Observation data can be ingested into MSL data systems, often with the goal to be visualized on MOV and provide validation reference to Forecast models.
+This document aims to demonstrate how Observation data can be ingested into MetService data systems, often with the goal to be visualized on MetService Insights PLatform (MIP) and provide validation reference to Forecast models.
 
 Ingestion Methods
 ====
 
-We currently support a few methods for ingesting Observation Data in MOV. Here, it's described from the most preferable to the least preferable way of doing
+We currently support a few methods for ingesting Observation Data in MIP. Here, it's described from the most preferable to the least preferable way of doing
 
 1. **FTP Pull**: The client provides an FTP/SFTP/FTPS server account from which we can download the data as CSV.
 
