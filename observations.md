@@ -2,7 +2,7 @@
 Ingesting Observation Data on MetService Data Systems
 ====
 
-This document aims to demonstrate how Observation data can be ingested into MetService data systems, often with the goal to be visualized on MetService Insights PLatform (MIP) and provide validation reference to Forecast models.
+This document aims to demonstrate how Observation data can be ingested into MetService data systems, often with the goal to be visualized on MetService Insights Platform (MIP) and provide validation reference to Forecast models.
 
 Ingestion Methods
 ====
